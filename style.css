@@ -80,7 +80,8 @@ button > svg {
 
 .container_view {
   display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
+  grid-template-columns: minmax(100px, 0.2fr) minmax(200px, 0.8fr);
+  width: 100%;
 }
 
 /* LISTASIDE */
@@ -100,11 +101,6 @@ button > svg {
   margin-top: 10px;
 }
 
-.store {
-  background-color: rebeccapurple;
-  height: 92vh;
-}
-
 .listAside ul {
   list-style: none;
   display: flex;
@@ -120,6 +116,13 @@ button > svg {
   font-weight: 500;
   padding: 2px 4px;
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.listAside ul li:hover {
+  background-color: #3d348b;
+  color: white;
+  border-radius: 5px;
 }
 
 .liActive {
@@ -144,11 +147,11 @@ button > svg {
 
 .popUpContainer {
   width: 50vw;
-  height: 50vh;
   background-color: white;
   border-radius: 0.4rem;
   box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.3);
   padding: 15px 20px;
+  position: relative;
 }
 
 .popUpContainer h1 {
@@ -181,14 +184,12 @@ button > svg {
   padding: 15px 20px;
 }
 
-.cancel {
-  background-color: #fffc4d;
-  color: black;
+button.closeModal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
   border: 0;
-}
-
-.cancel:hover {
-  background-color: #fffc4d9a;
+  padding: 0;
 }
 
 .accept {
@@ -208,4 +209,71 @@ button > svg {
 
 .delete:hover {
   background-color: #ff2929be;
+}
+
+/* STORE */
+
+.store {
+  background-color: #eee;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.section_store {
+  background-color: #fff;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 60px;
+}
+
+.section_store h3 {
+  font-size: 2rem;
+}
+
+.container_products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+  gap: 2vh;
+}
+
+.product_card {
+  max-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
+  background-color: #6f60f842;
+  border-radius: 0.4rem;
+  box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #6f60f843;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.product_card:hover {
+  scale: 105%;
+}
+
+.product_card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.product_card p {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.product_card img {
+  max-width: 100%; /* Se adapta al ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+  object-fit: cover;
 }
