@@ -11,8 +11,9 @@ git clone <URL_DEL_REPOSITORIO>
 cd <NOMBRE_DEL_PROYECTO>
 Instala las dependencias y ejecuta el servidor de desarrollo:
 ```
-```
-bash
+Instala las dependencias y ejecuta el proyecto
+
+```bash
 npm install
 npm run dev
 ```
