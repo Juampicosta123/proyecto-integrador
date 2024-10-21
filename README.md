@@ -1,6 +1,5 @@
 Requisitos previos
-Antes de comenzar, asegúrate de tener instalado Node.js (v14+). Si no lo tienes, puedes descargarlo desde:
-https://nodejs.org
+Antes de comenzar, asegúrate de tener instalado Node.js.
 
 Instalación
 Sigue estos pasos para configurar el proyecto en tu máquina local:
