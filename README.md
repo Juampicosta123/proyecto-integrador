@@ -7,14 +7,13 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 Clona este repositorio y navega al directorio del proyecto:
 
-bash
-Copiar código
+```bash
 git clone <URL_DEL_REPOSITORIO>
 cd <NOMBRE_DEL_PROYECTO>
 Instala las dependencias y ejecuta el servidor de desarrollo:
-
+```
+```
 bash
-Copiar código
 npm install
 npm run dev
-
+```
